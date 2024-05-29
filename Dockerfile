@@ -23,4 +23,4 @@ ENV FLASK_ENV=${FLASK_ENV}
 EXPOSE 5000
 
 # Flask 앱 실행
-CMD ["gunicorn", "-b", "0.0.0.0:5000", "morphs:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "morphs:app", "--timeout", "70", "--workers", "4"]
