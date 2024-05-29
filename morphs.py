@@ -1,5 +1,5 @@
 from flask import Flask, request
-from konlpy.tag import Okt
+from konlpy.tag import Hannanum
 from collections import Counter
 import re
 import math
@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 def analyze_text(text):
     # 형태소 분석기 초기화
-    okt = Okt()
+    okt = Hannanum()
 
     # 공백 제외 글자수 계산
     text_without_spaces = re.sub(r'\s+', '', text)
